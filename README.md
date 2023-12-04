@@ -1,9 +1,12 @@
-# RoverBot
+-- RoverBot --
+By methos87
+2023.12.04
 
 ROS Project 
 
-This my mobile robot project. It is developed on ROS enviroment.
+# Description
+This my mobile robot project. It will developed on ROS enviroment.
 
 Details comes later... 
 
-By methos87
+
