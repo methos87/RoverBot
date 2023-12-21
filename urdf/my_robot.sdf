@@ -1,0 +1,1152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.9">
+  <model name="my_robot">
+    <static>1</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="Back_wheel_holdar_17">
+      <pose>-0.044993660495227884 -0.045275099380192516 0.019216902137392952 0.0 0.0 -0.6662411688035467</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>-0.000000000000000009540979117872439 0.0 -0.013000000000000003 0.0 0.0 0.6662411688035467</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.000000000000000009540979117872439 0.0 -0.013000000000000003 0.0 0.0 5.551115123125783E-17</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Back_wheel_holdar_17_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Back_wheel_holdar_17">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.000000000000000009540979117872439 0.0 -0.013000000000000003 0.0 0.0 5.551115123125783E-17</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Back_wheel_holdar_17.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Stand_50mm_9">
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>0.06583798710966259 -0.10640509111244595 0.12881690213739297 0.0 0.0 0.0</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.07780049252645281 -0.014581028557180707 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_8_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.004336620799726326 -0.08551415353775448 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_26_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.07780049252645281 -0.014581028557180714 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_2_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.010318470819542274 -0.09648370433048603 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_3_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.034900646473389536 -0.0686924479492413 0.02164196490260093 1.5707963267948968 4.731457380761763E-16 1.4412495567948964</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_holder_19_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.03731084481888675 -0.055997431449237745 0.15881690213739297 0.0 0.0 1.4412495567948964</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Top_plate_16_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.06583798710966259 -0.10640509111244595 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_5_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.06185061246501125 -0.09300686751371379 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_30_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.001644034597247948 -0.004659641775220789 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_4_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.036710788896625005 -0.06149513523904486 0.18201690213739297 0.0 0.0 3.012045883589793</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Lidar_base_25_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.061968958212073114 -0.022430766783479675 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_29_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.06583798710966259 -0.10640509111244595 0.07561690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_7_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.07780049252645281 -0.014581028557180707 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_13_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.008553848986244283 -0.05225107446125809 0.019216902137392952 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Bottom_plate_1_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.02230413637394557 -0.01726337783454221 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_31_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.001644034597247948 -0.004659641775220789 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_10_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.03731084481888675 -0.055997431449237745 0.12561690213739296 0.0 0.0 1.4412495567948964</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Middle_plate_11_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.001644034597247948 -0.004659641775220789 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_14_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.061536695175354116 -0.046144478871149794 0.021641964902600924 1.5707963267948968 4.731457380761702E-16 -1.700343096794897</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_holder_18_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.010318470819542278 -0.09648370433048603 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_9_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.037370923431053076 0.021098179387213103 0.0024169021373929445 -1.700343096794897 -1.5707963267948961 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/DC_Motor_21_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.017616679396847305 -0.13053518475596454 0.002416902137392953 1.700343096794897 1.5707963267948961 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/DC_Motor_22_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.03731084481888675 -0.055997431449237745 0.07241690213739296 0.0 0.0 1.4412495567948964</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Middle_plate_6_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.010318470819542278 -0.09648370433048603 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_15_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.06583798710966259 -0.10640509111244595 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_12_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Stand_50mm_8">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.07780049252645281 -0.014581028557180707 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_8.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_20mm_26">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.004336620799726326 -0.08551415353775448 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_26.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_2">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.07780049252645281 -0.014581028557180714 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_2.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_3">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.010318470819542274 -0.09648370433048603 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_3.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Front_wheel_holder_19">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.034900646473389536 -0.0686924479492413 0.02164196490260093 1.5707963267948968 4.731457380761763E-16 1.4412495567948964</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_holder_19.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Top_plate_16">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.03731084481888675 -0.055997431449237745 0.15881690213739297 0.0 0.0 1.4412495567948964</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Top_plate_16.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_5">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.06583798710966259 -0.10640509111244595 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_5.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_20mm_30">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.06185061246501125 -0.09300686751371379 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_30.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_4">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.001644034597247948 -0.004659641775220789 0.022416902137392954 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_4.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Lidar_base_25">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.036710788896625005 -0.06149513523904486 0.18201690213739297 0.0 0.0 3.012045883589793</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Lidar_base_25.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_20mm_29">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.061968958212073114 -0.022430766783479675 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_29.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_7">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.06583798710966259 -0.10640509111244595 0.07561690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_7.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_30mm_13">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.07780049252645281 -0.014581028557180707 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_13.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Bottom_plate_1">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.008553848986244283 -0.05225107446125809 0.019216902137392952 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Bottom_plate_1.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_20mm_31">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.02230413637394557 -0.01726337783454221 0.16201690213739298 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_20mm_31.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_10">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.001644034597247948 -0.004659641775220789 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_10.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Middle_plate_11">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.03731084481888675 -0.055997431449237745 0.12561690213739296 0.0 0.0 1.4412495567948964</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Middle_plate_11.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_30mm_14">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.001644034597247948 -0.004659641775220789 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_14.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Front_wheel_holder_18">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.061536695175354116 -0.046144478871149794 0.021641964902600924 1.5707963267948968 4.731457380761702E-16 -1.700343096794897</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_holder_18.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_50mm_9">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.010318470819542278 -0.09648370433048603 0.07561690213739296 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_50mm_9.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="DC_Motor_21">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.037370923431053076 0.021098179387213103 0.0024169021373929445 -1.700343096794897 -1.5707963267948961 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/DC_Motor_21.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="DC_Motor_22">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.017616679396847305 -0.13053518475596454 0.002416902137392953 1.700343096794897 1.5707963267948961 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/DC_Motor_22.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Middle_plate_6">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.03731084481888675 -0.055997431449237745 0.07241690213739296 0.0 0.0 1.4412495567948964</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Middle_plate_6.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_30mm_15">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.010318470819542278 -0.09648370433048603 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_15.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Stand_30mm_12">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.06583798710966259 -0.10640509111244595 0.12881690213739297 0.0 0.0 -0.12954677000000023</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Stand_30mm_12.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Front_wheel_23">
+      <pose>0.03712721240426865 -0.14255637861374434 0.0024169021373929337 -1.5707963267949039 1.397383277771604 -0.12954677000000644</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>0.0000000000000000026020852139652106 -1.3877787807814457E-17 -0.03 1.570796326794898 -0.12954676999999964 -1.3973832777716044</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.0000000000000000026020852139652106 -1.3877787807814457E-17 -0.03 7.54183645470017E-18 -3.2703092161878985E-19 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_23_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Front_wheel_23">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.0000000000000000026020852139652106 -1.3877787807814457E-17 -0.03 7.54183645470017E-18 -3.2703092161878985E-19 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_23.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Front_wheel_24">
+      <pose>0.05931012924447501 0.02771945179335326 0.0024169021373929575 1.5707963267949003 1.4475748251835718 -0.12954676999999493</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>-0.0000000000000000008673617379884035 -6.938893903907228E-18 -0.030000000000000006 -1.5707963267948974 0.1295467700000004 1.4475748251835716</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.0000000000000000008673617379884035 -6.938893903907228E-18 -0.030000000000000006 1.6554831822726188E-18 3.706517595521738E-18 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_24_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Front_wheel_24">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.0000000000000000008673617379884035 -6.938893903907228E-18 -0.030000000000000006 1.6554831822726188E-18 3.706517595521738E-18 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Front_wheel_24.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Lidar_rotor_1">
+      <pose>0.036710788896625005 -0.06149513523904484 0.19151690213739297 3.141592653589793 0.0 2.855465813812072</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>-0.000000000000000006938893903907228 6.938893903907228E-18 0.009500000000000008 3.141592653589793 0.0 2.855465813812072</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>-0.000000000000000006938893903907228 6.938893903907228E-18 0.009500000000000008 3.141592653589793 0.0 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Lidar_rotor_1_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Lidar_rotor_1">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>-0.000000000000000006938893903907228 6.938893903907228E-18 0.009500000000000008 3.141592653589793 0.0 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.64705882352941179735950072426931001245975494384765625 0.64705882352941179735950072426931001245975494384765625 0.64705882352941179735950072426931001245975494384765625 1</ambient>
+          <diffuse>0.64705882352941179735950072426931001245975494384765625 0.64705882352941179735950072426931001245975494384765625 0.64705882352941179735950072426931001245975494384765625 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Lidar_rotor_1.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Back_wheel_20">
+      <pose>-0.06415354474779103 -0.052472850401332566 -0.014283097862607052 -1.5707963267948968 -1.021657024174122 0.904555157991325</pose>
+      <inertial>
+        <mass>0.0</mass>
+        <pose>0.000000000000000006938893903907228 0.0 -0.010500000000000002 1.5707963267948912 0.9045551579913388 1.0216570241741292</pose>
+        <inertia>
+          <ixx>0.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <laser_retro>0.0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose>0.000000000000000006938893903907228 0.0 -0.010500000000000002 -3.141592653589793 -3.517015769235398E-17 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Back_wheel_20_collision.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Back_wheel_20">
+        <laser_retro>0.0</laser_retro>
+        <transparency>0.0</transparency>
+        <visibility_flags>4294967295</visibility_flags>
+        <pose>0.000000000000000006938893903907228 0.0 -0.010500000000000002 -3.141592653589793 -3.517015769235398E-17 0.0</pose>
+        <material>
+          <render_order>0.0</render_order>
+          <lighting>1</lighting>
+          <ambient>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</ambient>
+          <diffuse>0.615686274509803954657627400592900812625885009765625 0.8117647058823529437887600579415448009967803955078125 0.9294117647058823816763606373569928109645843505859375 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <shininess>0.0</shininess>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>meshes/Back_wheel_20.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Back_wheel_stand_joint" type="revolute">
+      <parent>Stand_50mm_9</parent>
+      <child>Back_wheel_holdar_17</child>
+      <gearbox_ratio>1.0</gearbox_ratio>
+      <gearbox_reference_body>__default__</gearbox_reference_body>
+      <thread_pitch>1.0</thread_pitch>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.0</upper>
+          <effort>10.0</effort>
+          <velocity>1.0</velocity>
+          <stiffness>1.0E8</stiffness>
+          <dissipation>1.0</dissipation>
+        </limit>
+      </axis>
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Back_wheel_joint" type="revolute">
+      <parent>Back_wheel_holdar_17</parent>
+      <child>Back_wheel_20</child>
+      <gearbox_ratio>1.0</gearbox_ratio>
+      <gearbox_reference_body>__default__</gearbox_reference_body>
+      <thread_pitch>1.0</thread_pitch>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.0</upper>
+          <effort>10.0</effort>
+          <velocity>1.0</velocity>
+          <stiffness>1.0E8</stiffness>
+          <dissipation>1.0</dissipation>
+        </limit>
+      </axis>
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Left_wheel_joint" type="revolute">
+      <parent>Stand_50mm_9</parent>
+      <child>Front_wheel_24</child>
+      <gearbox_ratio>1.0</gearbox_ratio>
+      <gearbox_reference_body>__default__</gearbox_reference_body>
+      <thread_pitch>1.0</thread_pitch>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.0</upper>
+          <effort>10.0</effort>
+          <velocity>1.0</velocity>
+          <stiffness>1.0E8</stiffness>
+          <dissipation>1.0</dissipation>
+        </limit>
+      </axis>
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Right_wheel_joint" type="revolute">
+      <parent>Stand_50mm_9</parent>
+      <child>Front_wheel_23</child>
+      <gearbox_ratio>1.0</gearbox_ratio>
+      <gearbox_reference_body>__default__</gearbox_reference_body>
+      <thread_pitch>1.0</thread_pitch>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.0</upper>
+          <effort>10.0</effort>
+          <velocity>1.0</velocity>
+          <stiffness>1.0E8</stiffness>
+          <dissipation>1.0</dissipation>
+        </limit>
+      </axis>
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Lidar_joint" type="revolute">
+      <parent>Stand_50mm_9</parent>
+      <child>Lidar_rotor_1</child>
+      <gearbox_ratio>1.0</gearbox_ratio>
+      <gearbox_reference_body>__default__</gearbox_reference_body>
+      <thread_pitch>1.0</thread_pitch>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.0</upper>
+          <effort>10.0</effort>
+          <velocity>1.0</velocity>
+          <stiffness>1.0E8</stiffness>
+          <dissipation>1.0</dissipation>
+        </limit>
+      </axis>
+      <pose>0 0 0 0.0 0.0 0.0</pose>
+    </joint>
+  </model>
+</sdf>

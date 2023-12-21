@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+
+    <xacro:include filename="my_robot_inertia.xacro"/>
+
+    <!-- Materials -->
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="orange">
+        <color rgba="0.70 0.56 0.22 1" />
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1" />
+    </material>
+
+    <material name="blue">
+        <color rgba="0.14 0.23 0.40 1" />
+    </material>
+
+    <material name="yellow">
+        <color rgba="1 1 0 1" />
+    </material>
+
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1" />
+    </material>
+
+    <!-- Constants for robot dimensions-->
+    <xacro:property name="damping" value="0.5" />
+    <xacro:property name="friciton" value="100" />
+
+    <!-- BASE LINK -->
+
+    <link name="Base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+
+    <!-- BODY LINK -->
+
+    <joint name="Body_joint" type="fixed">
+        <origin xyz="0 0 0.05"/>
+        <parent link="Base_link"/>
+        <child link="Body_Link"/>
+    </joint>
+
+    <link name="Body_Link">
+
+        <visual>
+            <origin xyz="0.064 -0.0463 0.056" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_9.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.02925 0 0.140" rpy="0 0 1.5708"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Top_plate_16.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.064 -0.0463 0.1096" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_13.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.05 0.015 0.00125" rpy="1.5708 0 -1.5708"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_holder_18.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.064 -0.0463 0.0032" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_2.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.0095 0.03647 0.1428" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_30.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.02925 -0.005 0.163" rpy="0 0 3.14159"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_base_25.stl"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 -0.0463 0.0032" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_4.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.02925 0 0.053" rpy="0 0 1.5708"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Middle_plate_6.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.064 0.0463 0.1096" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_14.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Bottom_plate_1.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.01675 0.0795 -0.0177" rpy="-1.5708 -1.5708 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/DC_Motor_21.stl"/>
+            </geometry>
+            <material name="yellow" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 -0.0463 0.1096" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_12.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.026 -0.015 0.00125" rpy="1.5708 0 1.5708"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_holder_19.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.02925 0 0.1064" rpy="0 0 1.5708"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Middle_plate_11.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.064 0.0463 0.056" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_8.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 -0.0463 0.056" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_10.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.01675 -0.0795 -0.0177" rpy="1.5708 1.5708 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/DC_Motor_22.stl"/>
+            </geometry>
+            <material name="yellow" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.0495 0.03647 0.1428" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_26.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.0005 -0.03353 0.1428" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_31.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 0.0463 0.0032" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_5.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.064 0.0463 0.0032" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_3.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 0.0463 0.1096" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_15.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.0585 -0.03353 0.1428" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_29.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="-0.013 0.0463 0.056" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_7.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_7.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_box mass="1" x="0.150" y="0.1" z="0.168">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+
+    </link>
+
+    <gazebo reference="Body_Link">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+
+    <!-- LIDAR LINK -->
+
+    <joint name="Lidar_joint" type="continuous">
+        <origin xyz="0.02925 -0.005 0.163" rpy="3.14159 0 3.14159"/>
+        <parent link="Body_Link"/>
+        <child link="Lidar_rotor_1"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Lidar_rotor_1">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="3.14159 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_rotor_1.stl"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="3.14159 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_rotor_1.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.17" length="0.02" radius="0.035">
+            <origin xyz="0 0 0" rpy="3.14159 0 0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Lidar_rotor_1">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- BACK WHEEL HOLDER LINK -->
+
+    <joint name="Back_wheel_stand_joint" type="continuous">
+        <origin xyz="-0.054 0 -0.0135" rpy="0 0 -1.5708"/>
+        <parent link="Body_Link"/>
+        <child link="Back_wheel_holder_17"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+
+    <link name="Back_wheel_holder_17">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_holdar_17.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_holdar_17.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_box mass="0.036" x="0.045" y="0.26" z="0.40">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+
+    </link>
+
+    <gazebo reference="Back_wheel_holder_17">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <!-- BACK WHEEL LINK -->
+
+    <joint name="Back_wheel_joint" type="continuous">
+        <origin xyz="0 -0.018 -0.021" rpy="-1.5708 0 1.5708"/>
+        <parent link="Back_wheel_holder_17"/>
+        <child link="Back_wheel_20"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Back_wheel_20">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_20.stl"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_20.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_sphere mass="0.012" radius="0.01425">
+            <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        </xacro:inertial_sphere>
+
+    </link>
+
+
+    <gazebo reference="Back_wheel_20">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+
+
+    <!-- RIGHT WHEEL LINK -->
+
+    <joint name="Right_wheel_joint" type="continuous">
+        <origin xyz="0.04 -0.119 -0.0177" rpy="-1.5708 0 0"/>
+        <parent link="Body_Link"/>
+        <child link="Front_wheel_23"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Front_wheel_23">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_23.stl"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_23.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.054" length="0.0258" radius="0.033">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Front_wheel_23">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- LEFT WHEEL LINK -->
+
+    <joint name="Left_wheel_joint" type="continuous">
+        <origin xyz="0.04 0.119 -0.0177" rpy="1.5708 0 0"/>
+        <parent link="Body_Link"/>
+        <child link="Front_wheel_24"/>
+        <axis xyz="0 0 -1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Front_wheel_24">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_24.stl"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_24.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.054" length="0.0258" radius="0.033">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Front_wheel_24">
+        <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
+
+
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            <joint_name>Body_joint</joint_name>
+            <joint_name>Lidar_joint</joint_name>
+            <joint_name>Back_wheel_stand_joint</joint_name>
+            <joint_name>Back_wheel_joint</joint_name>
+            <joint_name>Right_wheel_joint</joint_name>
+            <joint_name>Left_wheel_joint</joint_name>
+        </plugin>
+    </gazebo>
+
+
+    <!-- CAMERA LINK -->
+
+    <joint name="camera_optical_joint" type="fixed">
+        <origin xyz="0.1 0 0.163" rpy="0 0 4.71239" />
+        <parent link="Body_Link" />
+        <child link="camera_link_optical" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="camera_link_optical">
+    </link>
+
+    <gazebo reference="camera_link_optical">
+        <sensor type="depth" name="my_cam">
+            <update_rate>20</update_rate>
+            <visualize>true</visualize>
+            <camera name="cam">
+                <horizontal_fov>1.3962634</horizontal_fov>
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>R8B8G8</format>
+                </image>
+                <clip>
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical</frame_name>
+                <min_depth>0.1</min_depth>
+                <max_depth>500</max_depth>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>

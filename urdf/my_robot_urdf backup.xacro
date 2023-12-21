@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+
+    <xacro:include filename="my_robot_inertia.xacro"/>
+
+    <!-- Materials -->
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="orange">
+        <color rgba="0.70 0.56 0.22 1" />
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1" />
+    </material>
+
+    <material name="blue">
+        <color rgba="0.14 0.23 0.40 1" />
+    </material>
+
+    <material name="yellow">
+        <color rgba="1 1 0 1" />
+    </material>
+
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1" />
+    </material>
+
+    <!-- Constants for robot dimensions-->
+    <xacro:property name="damping" value="0.5" />
+    <xacro:property name="friciton" value="100" />
+
+    <!-- BASE LINK -->
+
+    <link name="Base_link">
+    </link>
+
+
+    <!-- BODY LINK -->
+
+    <joint name="Body_joint" type="fixed">
+        <origin xyz="0 0 0"/>
+        <parent link="Base_link"/>
+        <child link="Body_Link"/>
+    </joint>
+
+    <link name="Body_Link">
+
+        <visual>
+            <origin xyz="-0.010318470819542278 -0.09648370433048603 0.07561690213739296" rpy="0 0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_9.stl"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.03731084481888675 -0.055997431449237745 0.15881690213739297" rpy="0.0 -0.0 1.4412495567948964"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Top_plate_16.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <visual>
+            <origin xyz="0.07780049252645281 -0.014581028557180707 0.12881690213739297" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_13.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.061536695175354116 -0.046144478871149794 0.021641964902600924" rpy="1.5707963267948968 4.731457380761702E-16 -1.700343096794897"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_holder_18.stl"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.07780049252645281 -0.014581028557180714 0.022416902137392954" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_2.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.06185061246501125 -0.09300686751371379 0.16201690213739298" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_30.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.036710788896625005 -0.06149513523904486 0.18201690213739297" rpy="0.0 -0.0 3.012045883589793"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_base_25.stl"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.001644034597247948 -0.004659641775220789 0.022416902137392954" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_4.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.03731084481888675 -0.055997431449237745 0.07241690213739296" rpy="0.0 -0.0 1.4412495567948964"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Middle_plate_6.stl"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.001644034597247948 -0.004659641775220789 0.12881690213739297" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_14.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.008553848986244283 -0.05225107446125809 0.019216902137392952" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Bottom_plate_1.stl"/>
+            </geometry>
+            <material name="gret">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.037370923431053076 0.021098179387213103 0.0024169021373929445" rpy="-1.700343096794897 -1.5707963267948961 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/DC_Motor_21.stl"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.06583798710966259 -0.10640509111244595 0.12881690213739297" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_12.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.034900646473389536 -0.0686924479492413 0.02164196490260093" rpy="1.5707963267948968 4.731457380761763E-16 1.4412495567948964"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_holder_19.stl"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.03731084481888675 -0.055997431449237745 0.12561690213739296" rpy="0.0 -0.0 1.4412495567948964"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Middle_plate_11.stl"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.07780049252645281 -0.014581028557180707 0.07561690213739296" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_8.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.001644034597247948 -0.004659641775220789 0.07561690213739296" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_10.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.017616679396847305 -0.13053518475596454 0.002416902137392953" rpy="1.700343096794897 1.5707963267948961 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/DC_Motor_22.stl"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.004336620799726312 -0.08551415353775448 0.16201690213739298" rpy="0.0 -0.0 -1.700343096794897"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_26.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.02230413637394557 -0.01726337783454221 0.16201690213739298" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_31.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.06583798710966259 -0.10640509111244595 0.022416902137392954" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_5.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="-0.010318470819542274 -0.09648370433048603 0.022416902137392954" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_3.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="-0.010318470819542278 -0.09648370433048603 0.12881690213739297" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_30mm_15.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.061968958212073114 -0.022430766783479675 0.16201690213739298" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_20mm_29.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <visual>
+            <origin xyz="0.06583798710966259 -0.10640509111244595 0.07561690213739297" rpy="0.0 -0.0 -0.12954677000000023"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_7.stl"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Stand_50mm_7.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_box mass="0.8" x="0.3" y="0.139" z="0.22">
+            <origin xyz="0.03731084481888675 -0.055997431449237745 0.07241690213739296" rpy="0 0 1.4412495567948964"/>
+        </xacro:inertial_box>
+
+    </link>
+
+    <gazebo reference="Body_Link">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+
+    <!-- LIDAR LINK -->
+
+    <joint name="Lidar_joint" type="continuous">
+        <origin xyz="0.036710788896625005 -0.06149513523904484 0.19151690213739297" rpy="3.141592653589793 -0.0 2.855465813812072"/>
+        <parent link="Body_Link"/>
+        <child link="Lidar_rotor_1"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Lidar_rotor_1">
+
+        <visual>
+            <origin xyz="-6.938893903907228E-18 6.938893903907228E-18 0.009500000000000008" rpy="3.141592653589793 -0.0 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_rotor_1.stl"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.6470588235294118 0.6470588235294118 0.6470588235294118 1.0"/>
+            </material>
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="-6.938893903907228E-18 6.938893903907228E-18 0.009500000000000008" rpy="3.141592653589793 -0.0 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Lidar_rotor_1.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.34" length="0.02" radius="0.035">
+            <origin xyz="0 0 0" rpy="3.141592653589793 -0.0 0.0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Lidar_rotor_1">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- BACK WHEEL HOLDER LINK -->
+
+    <joint name="Back_wheel_stand_joint" type="continuous">
+        <origin xyz="-0.044993660495227884 -0.045275099380192516 0.019216902137392952" rpy="0.0 -0.0 -0.6662411688035467"/>
+        <parent link="Body_Link"/>
+        <child link="Back_wheel_holder_17"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+
+    <link name="Back_wheel_holder_17">
+
+        <visual>
+            <origin xyz="-9.540979117872439E-18 0.0 -0.013000000000000003" rpy="0.0 -0.0 5.551115123125783E-17"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_holdar_17.stl"/>
+            </geometry>
+            <material name="grey" />
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="-9.540979117872439E-18 0.0 -0.013000000000000003" rpy="0.0 -0.0 5.551115123125783E-17"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_holdar_17.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_box mass="0.036" x="0.045" y="0.26" z="0.40">
+            <origin xyz="0 0 -0.013000000000000003" rpy="0.0 -0.0 0.0"/>
+        </xacro:inertial_box>
+
+    </link>
+
+    <gazebo reference="Back_wheel_holder_17">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <!-- BACK WHEEL LINK -->
+
+    <joint name="Back_wheel_joint" type="continuous">
+        <origin xyz="-0.010614084243774424 -0.0175 -0.03350000000000001" rpy="-1.5707963267948968 -1.021657024174122 1.5707963267948715"/>
+        <parent link="Back_wheel_holder_17"/>
+        <child link="Back_wheel_20"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Back_wheel_20">
+
+        <visual>
+            <origin xyz="6.938893903907228E-18 0.0 -0.010500000000000002" rpy="-3.141592653589793 -3.517015769235398E-17 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_20.stl"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="6.938893903907228E-18 0.0 -0.010500000000000002" rpy="-3.141592653589793 -3.517015769235398E-17 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Back_wheel_20.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_sphere mass="0.012" radius="0.01425">
+            <origin xyz="0.0 0.0 0.0" rpy="-3.141592653589793 0 0"/>
+        </xacro:inertial_sphere>
+
+    </link>
+
+
+    <gazebo reference="Back_wheel_20">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+
+
+    <!-- RIGHT WHEEL LINK -->
+
+    <joint name="Right_wheel_joint" type="continuous">
+        <origin xyz="0.03712721240426865 -0.14255637861374434 0.0024169021373929337" rpy="-1.5707963267949039 1.397383277771604 -0.12954677000000644"/>
+        <parent link="Body_Link"/>
+        <child link="Front_wheel_23"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Front_wheel_23">
+
+        <visual>
+            <origin xyz="2.6020852139652106E-18 -1.3877787807814457E-17 -0.03" rpy="7.54183645470017E-18 -3.2703092161878985E-19 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_23.stl"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="2.6020852139652106E-18 -1.3877787807814457E-17 -0.03" rpy="7.54183645470017E-18 -3.2703092161878985E-19 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_23.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.054" length="0.0258" radius="0.033">
+            <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Front_wheel_23">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- LEFT WHEEL LINK -->
+
+    <joint name="Left_wheel_joint" type="continuous">
+        <origin xyz="0.05931012924447501 0.02771945179335326 0.0024169021373929575" rpy="1.5707963267949003 1.4475748251835718 -0.12954676999999493"/>
+        <parent link="Body_Link"/>
+        <child link="Front_wheel_24"/>
+        <axis xyz="0 0 1"/>
+        <dynamics damping="${damping}" friction="${friciton}"/>
+    </joint>
+
+    <link name="Front_wheel_24">
+
+        <visual>
+            <origin xyz="-8.673617379884035E-19 -6.938893903907228E-18 -0.030000000000000006" rpy="1.6554831822726188E-18 3.706517595521738E-18 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_24.stl"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.615686274509804 0.8117647058823529 0.9294117647058824 1.0"/>
+            </material>
+        </visual>
+
+        <collision name="collision">
+            <origin xyz="-8.673617379884035E-19 -6.938893903907228E-18 -0.030000000000000006" rpy="1.6554831822726188E-18 3.706517595521738E-18 0.0"/>
+            <geometry>
+                <mesh filename="file://$(find rover_bot)/meshes/Front_wheel_24.stl"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.054" length="0.0258" radius="0.033">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+
+    </link>
+
+    <gazebo reference="Front_wheel_24">
+        <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
+
+
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            <joint_name>Body_joint</joint_name>
+            <joint_name>Lidar_joint</joint_name>
+            <joint_name>Back_wheel_stand_joint</joint_name>
+            <joint_name>Back_wheel_joint</joint_name>
+            <joint_name>Right_wheel_joint</joint_name>
+            <joint_name>Left_wheel_joint</joint_name>
+        </plugin>
+    </gazebo>
+    
+
+</robot>
