@@ -122,7 +122,7 @@
                 <mesh filename="file://$(find rover_bot)/meshes/Middle_plate_6.stl"/>
             </geometry>
             <material name="grey" />
-        </visual>
+        </visual>P
 
         <visual>
             <origin xyz="0.064 0.0463 0.1096" rpy="0 0 0"/>
